@@ -1,0 +1,170 @@
+.footer {
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-family: sans-serif;
+}
+
+.topSection {
+  background-color: #f8f8f8;
+  padding: 32px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.topFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.appTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #007a3e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.storeButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.storeBtn {
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.socialSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  color: #9ca3af;
+}
+
+.mainSection {
+  padding: 40px 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.columnTitle {
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #007a3e;
+  text-decoration: underline;
+}
+
+.phone {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007a3e;
+  margin: 4px 0;
+}
+
+.faqBtn {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #007a3e;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bottomBar {
+  background-color: #007a3e;
+  color: white;
+  padding: 16px 0;
+  font-size: 12px;
+}
+
+.bottomFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #22c55e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(22, 101, 52, 0.3);
+}
+
+@media (min-width: 768px) {
+  .topFlex { flex-direction: row; }
+  .appSection { flex-direction: row; }
+  .grid { grid-template-columns: repeat(4, 1fr); }
+  .bottomFlex { flex-direction: row; }
+}
