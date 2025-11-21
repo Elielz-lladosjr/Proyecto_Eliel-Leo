@@ -21,7 +21,6 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      {/* Parte Superior */}
       <div className={styles.topSection}>
         <div className={styles.container}>
           <div className={styles.topFlex}>
@@ -61,7 +60,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Parte Central */}
       <div className={styles.mainSection}>
         <div className={styles.container}>
           <div className={styles.grid}>
@@ -93,7 +91,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Parte Inferior */}
       <div className={styles.bottomBar}>
         <div className={styles.container}>
           <div className={styles.bottomFlex}>

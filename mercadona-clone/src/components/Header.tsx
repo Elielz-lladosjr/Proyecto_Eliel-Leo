@@ -25,7 +25,6 @@ export default function Header() {
         <div className="font-bold text-2xl tracking-tight">Mercadona</div>
       </div>
 
-      {/* Buscador (Visible en desktop) */}
       <div className="hidden lg:flex flex-1 max-w-xl mx-8">
         <div className="relative w-full">
           <input 
@@ -37,7 +36,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Iconos Derecha */}
       <div className="flex items-center gap-6">
         <button className="flex items-center gap-2 hover:text-green-200 transition">
           <User size={22} />

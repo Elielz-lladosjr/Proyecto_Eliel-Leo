@@ -1,5 +1,4 @@
-import styles from './MainContent.module.css'; // Importamos el CSS Module
-
+import styles from './MainContent.module.css'; 
 const MainContent = () => {
   return (
     <main className={styles.main}>
@@ -15,7 +14,7 @@ const MainContent = () => {
         <div className={styles.grid}>
           {[1, 2, 3].map((item) => (
             <div key={item} className={styles.productCard}>
-              <span style={{ color: '#9ca3af', fontWeight: 500 }}>Producto Destacado {item}</span>
+              <span style={{ color: '#f3f4f6', fontWeight: 500 }}>Producto Destacado {item}</span>
             </div>
           ))}
         </div>
