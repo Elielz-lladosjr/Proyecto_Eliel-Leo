@@ -1,114 +1,137 @@
-import { 
-  Facebook, Twitter, Youtube, Instagram, Linkedin, Globe, Smartphone, ArrowRight
-} from 'lucide-react';
+import { Facebook, Youtube, Instagram, Linkedin, Mail, Headset } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
   const linkSections = [
     {
-      title: "Lo más buscado",
-      links: ["Localizar Supermercados", "Trabaja con nosotros", "Sala de Prensa", "Actualidad Mercadona"]
+      title: "Cliente",
+      links: ["Supermercados", "Consejos", "Factura cliente"]
     },
     {
-      title: "Enlaces de interés",
-      links: ["Consejos", "Atención al Cliente", "Portal de Proveedores", "Factura Electrónica"]
+      title: "Trabajador",
+      links: ["Trabaja con nosotros"]
     },
     {
-      title: "Legal",
-      links: ["Accesibilidad", "Condiciones de uso", "Política de privacidad", "Política de cookies"]
+      title: "Proveedor",
+      links: ["Factura-Me", "Portal Trinidad"]
+    },
+    {
+      title: "Sociedad",
+      links: ["Actualidad", "Sala de prensa", "Conoce Mercadona", "Mercadona en Portugal", "Cuidemos el Planeta"]
     }
   ];
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.topSection}>
+      
+      {/* SECCIÓN SUPERIOR: La imagen ocupa todo el fondo */}
+      <section className={styles.topSection}>
+        
+        {/* IMAGEN DE FONDO (footer1.png) */}
+        <div className={styles.backgroundImageContainer}>
+            <img 
+              className={styles.heroImage} 
+              src="/imagenes/footer2.jpg" 
+              alt="Fondo Mercadona" 
+            />
+        </div>
+
+        {/* CONTENIDO (Texto y Formulario) ENCIMA DE LA IMAGEN */}
         <div className={styles.container}>
-          <div className={styles.topFlex}>
+          <div className={styles.heroContent}>
+            <h2 className={styles.heroTitle}>
+              Empieza tu compra en Mercadona
+            </h2>
             
-            <div className={styles.appSection}>
-              <div className={styles.appTitle}>
-                <Smartphone size={28} />
-                <span>Descarga nuestra App</span>
-              </div>
-              <div className={styles.storeButtons}>
-                <button className={styles.storeBtn}>
-                  <div>
-                    <span style={{display:'block', fontSize:'10px', fontWeight:300}}>Consíguelo en el</span>
-                    <span style={{fontWeight:'bold'}}>App Store</span>
-                  </div>
-                </button>
-                <button className={styles.storeBtn}>
-                  <div>
-                    <span style={{display:'block', fontSize:'10px', fontWeight:300}}>DISPONIBLE EN</span>
-                    <span style={{fontWeight:'bold'}}>Google Play</span>
-                  </div>
+            <form className={styles.postalForm} onSubmit={(e) => e.preventDefault()}>
+              <div className={styles.postalRow}>
+                <input 
+                  className={styles.postalInput} 
+                  type="text" 
+                  placeholder="Código postal" 
+                  aria-label="Código postal" 
+                />
+                <button className={styles.postalBtn} type="submit">
+                  ENTRAR
                 </button>
               </div>
-            </div>
+            </form>
 
-            <div className={styles.socialSection}>
-              <span style={{fontSize:'14px', fontWeight:500, textTransform:'uppercase'}}>Síguenos en:</span>
-              <div className={styles.socialIcons}>
-                <Facebook size={24} />
-                <Twitter size={24} />
-                <Youtube size={24} />
-                <Instagram size={24} />
-                <Linkedin size={24} />
-              </div>
+            <p className={styles.downloadMessage}>
+              O descarga la App y haz tu compra en cualquier momento.
+            </p>
+
+            <div className={styles.storeBadges}>
+               <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="/imagenes/play.svg" alt="Disponible en Google Play" className={styles.storeSvg} />
+               </a>
+               <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="/imagenes/app.svg" alt="Consíguelo en el App Store" className={styles.storeSvg} />
+               </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.mainSection}>
+      {/* SECCIÓN INFERIOR (Oscura) */}
+      <section className={styles.mainSectionDark}>
         <div className={styles.container}>
-          <div className={styles.grid}>
-            {linkSections.map((section, index) => (
-              <div key={index}>
-                <h3 className={styles.columnTitle}>{section.title}</h3>
-                <ul className={styles.linkList}>
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a href="#" className={styles.link}>{link}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className={styles.mainFlexLayout}>
+            
+            <div className={styles.leftLinksStack}>
+              {linkSections.map((section, index) => (
+                <div key={index} className={styles.linkBlock}>
+                  <h3 className={styles.columnTitle}>{section.title}</h3>
+                  <ul className={styles.linkList}>
+                    {section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a href="#" className={styles.link}>{link}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
-            <div>
-              <h3 className={styles.columnTitle}>Atención al Cliente</h3>
-              <div style={{fontSize:'14px', color:'#6b7280'}}>
-                <p>¿Tienes dudas? Llámanos</p>
-                <p className={styles.phone}>800 500 220</p>
-                <p style={{fontSize:'12px'}}>Horario: 7:00 - 22:30</p>
-                <button className={styles.faqBtn}>
-                  Ir a preguntas frecuentes <ArrowRight size={16} />
-                </button>
+            <div className={styles.rightContactColumn}>
+              {/* AQUÍ ESTÁ EL CAMBIO: YA NO ES UN <A>, ES UN DIV/SPAN */}
+              <div className={styles.phoneBlock}>
+                <img src="/imagenes/footer1.png" alt="Contacto Mercadona" className={styles.phoneImage} />
+                <span className={styles.phoneNumber}>800 500 220</span>
+              </div>
+
+              <div className={styles.socialIcons}>
+                <a href="#" aria-label="Email"><Mail size={18} /></a>
+                <a href="#" aria-label="Facebook"><Facebook size={18} /></a>
+                <a href="#" aria-label="X" style={{fontWeight: 'bold', fontSize: '16px', fontFamily: 'sans-serif'}}>𝕏</a>
+                <a href="#" aria-label="YouTube"><Youtube size={18} /></a>
+                <a href="#" aria-label="Instagram"><Instagram size={18} /></a>
+                <a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.bottomBar}>
+      <section className={styles.bottomBar}>
         <div className={styles.container}>
           <div className={styles.bottomFlex}>
-            <p>&copy; {new Date().getFullYear()} Mercadona S.A. Todos los derechos reservados.</p>
+            <p className={styles.copyright}>
+              © Mercadona S.A. A46103834. Todos los derechos reservados.
+            </p>
             
-            <div className={styles.bottomLinks}>
-               <a href="#" style={{color:'white', textDecoration:'none'}}>Política de Privacidad</a>
-               <a href="#" style={{color:'white', textDecoration:'none'}}>Términos de Uso</a>
-               <div className={styles.country}>
-                 <Globe size={14} />
-                 <span style={{fontWeight:500}}>España</span>
-               </div>
+            <div className={styles.legalLinks}>
+               <a href="#">Accesibilidad</a>
+               <a href="#">Política de privacidad</a>
+               <a href="#">Política de cookies</a>
+               <a href="#">Términos y condiciones</a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer; 
