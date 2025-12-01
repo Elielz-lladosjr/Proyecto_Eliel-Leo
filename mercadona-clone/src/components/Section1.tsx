@@ -1,8 +1,41 @@
+import { Container, Row, Col, Form, Button, FloatingLabel } from 'react-bootstrap';
+import styles from './Section1.module.css';
+
 const Section1 = () => {
   return (
-    <main>
-
-    </main>
+    <section className={`${styles.heroSection} d-flex align-items-center`}>
+      <Container>
+        <Row className="justify-content-end">
+          <Col lg={5} md={6}>
+            <h1 className={styles.title}>
+              Empieza tu compra <br /> en Mercadona
+            </h1>
+            <p className={styles.subtitle}>
+              Introduce tu código postal y dependiendo de tu ciudad accederás a la nueva compra online o a la web clásica.
+            </p>
+            <div className="d-flex flex-column flex-md-row gap-2" style={{ maxWidth: '460px' }}>
+              <div className="flex-grow-1">
+                <FloatingLabel 
+                  controlId="floatingInput" 
+                  label="Código postal"
+                  className={styles.customFloatingLabel}
+                >
+                  <Form.Control 
+                    type="text" 
+                    placeholder="Código postal"
+                    aria-label="Código postal"
+                    className={styles.inputField}
+                  />
+                </FloatingLabel>
+              </div>
+              <Button className={styles.enterButton}>
+                ENTRAR
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

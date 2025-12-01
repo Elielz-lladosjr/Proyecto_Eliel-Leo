@@ -1,0 +1,57 @@
+.heroSection {
+    background-image: url(/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        background-image: url(/fondo.1.2.jpg);
+    }
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-weight: 900 !important;
+    font-size: 2.7rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+    max-width: 460px;
+}
+
+.enterButton {
+    background-color: #4aae5e !important;
+    border: none !important;
+    font-weight: 700 !important;
+    padding: 0 45px !important;
+    height: 56px !important;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.enterButton:hover {
+    background-color: #008f1c !important;
+}
+
+.customFloatingLabel {
+    color: #707070;
+}
+
+.inputField {
+    height: 56px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.inputField:focus {
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
