@@ -1,0 +1,31 @@
+.section2 {
+    padding: 3rem 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 400px; /* Limit width to match image look */
+    margin: 0 auto; /* Center if text-center */
+}
+
+@media (min-width: 768px) {
+    .description {
+        margin: 0; /* Reset margin for left align on desktop */
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
