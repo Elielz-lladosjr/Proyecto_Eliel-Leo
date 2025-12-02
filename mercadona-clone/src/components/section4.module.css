@@ -2,7 +2,10 @@
   background-color: #f3f2ee;
   box-sizing: border-box;
   padding: 3rem 2rem;
-  margin-top: 25rem; 
+  position: relative;
+  overflow: hidden;
+  /* Transición suave al redimensionar la pantalla */
+  transition: all 0.3s ease;
 }
 
 .title {
@@ -14,25 +17,49 @@
   max-width: 405px;
 }
 
+/* Imagen visible solo en móvil (se oculta en escritorio) */
 .heroImage {
-  max-width: 560px;
+  max-width: 100%;
+  height: auto;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+  display: block;
 }
 
 .storeImg {
   max-height: 48px;
+  cursor: pointer; /* Un detalle visual extra */
 }
 
-@media (min-width: 768px) {
+/* IMPORTANTE: Cambiamos de 768px a 992px.
+   ¿Por qué? Porque en tu TSX usas 'col-lg-6'. Bootstrap 'lg' empieza en 992px.
+   Si lo dejas en 768px, en una tablet verás el texto montado sobre la foto de fondo.
+*/
+@media (min-width: 992px) {
   .section {
     background-image: url('/public/fondo2.jpg');
-    background-position: right center;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 450px;
+    
+    /* TRUCO 1: Posición */
+    /* Pegamos la imagen totalmente a la derecha y centrada verticalmente */
+    background-position: right center;
+
+    /* TRUCO 2: Tamaño (La clave del responsive) */
+    /* Decimos: "Ocupa el 50% del ancho del contenedor, y calcula la altura automática"
+       Esto hace que al "achicar" la web, la imagen se encoja proporcionalmente. */
+    background-size: 50% auto; 
+    
+    /* Ajustamos la altura y el padding para desktop */
+    min-height: 500px; /* Usar min-height es más seguro que height fijo */
+    padding: 4rem 3rem;
+    
+    /* Flex para centrar el contenido verticalmente si sobra espacio */
+    display: flex;
+    align-items: center;
   }
 
+  /* Ocultamos la imagen física <img> porque ya mostramos el fondo CSS */
   .heroImage {
     display: none;
   }
