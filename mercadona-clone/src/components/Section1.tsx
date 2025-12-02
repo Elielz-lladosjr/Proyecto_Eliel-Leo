@@ -18,7 +18,6 @@ const Section1 = () => {
                 <FloatingLabel 
                   controlId="floatingInput" 
                   label="Código postal"
-                  className={styles.customFloatingLabel}
                 >
                   <Form.Control 
                     type="text" 

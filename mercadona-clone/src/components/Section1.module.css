@@ -40,14 +40,9 @@
     background-color: #008f1c !important;
 }
 
-.customFloatingLabel {
-    color: #707070;
-}
-
 .inputField {
     height: 56px !important;
     border: none !important;
-    border-radius: 4px !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
 }
 
