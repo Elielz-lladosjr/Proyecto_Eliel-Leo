@@ -5,8 +5,8 @@ const Section2 = () => {
   return (
     <section className={styles.section2}>
       <Container>
-        <Row className="align-items-center">
-          <Col md={6} className="mb-4 mb-md-0 text-center text-md-start">
+        <Row className="align-items-center justify-content-center column-gap-4">
+          <Col md={5} className="mb-4 mb-md-0 text-center text-md-start">
             <div className={styles.contentWrapper}>
               <h2 className={styles.title}>Compra online</h2>
               <p className={styles.description}>
@@ -14,7 +14,7 @@ const Section2 = () => {
               </p>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={5}>
             <Image 
               src="/cuadro1.jpeg" 
               alt="Compra online en Mercadona" 
