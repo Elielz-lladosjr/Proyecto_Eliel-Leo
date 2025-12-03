@@ -22,8 +22,8 @@ const Section4 = () => {
               />
               <button className="btn btn-success btn-lg fw-bold">ENTRAR</button>
             </div>
+            <p className="text-muted mb-4">
 
-            <p className=".infoText">
               O descarga la App y haz tu compra en cualquier momento.
             </p>
 
@@ -31,6 +31,13 @@ const Section4 = () => {
               <img src="/playstore.svg" alt="Google Play" className={styles.storeImg} />
               <img src="/appstore.svg" alt="App Store" className={styles.storeImg} />
             </div>
+
+            {/* Esta imagen solo se muestra en móvil (controlado por CSS .heroImage) */}
+            <img 
+              src="/fondo2.jpg" 
+              alt="Mercadona productos" 
+              className={styles.heroImage} 
+            />
           </div>
         </div>
       </div>

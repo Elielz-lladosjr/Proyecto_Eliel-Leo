@@ -4,7 +4,6 @@
   padding: 3rem 2rem;
   position: relative;
   overflow: hidden;
-  /* Transición suave al redimensionar la pantalla */
   transition: all 0.3s ease;
 }
 
@@ -16,19 +15,51 @@
   margin: 0 0 1.5rem;
   max-width: 405px;
 }
-.infoText{
-  white-space: nowrap
+
+/* --- TUS ESTILOS NUEVOS --- */
+.infoText {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  white-space: nowrap; /* Mantiene el texto en una sola línea */
+  width: 100%;
 }
+
+/* --- ESTILOS MÓVIL (Recuperados de la otra rama) --- */
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+  display: block;
+}
+
+.storeImg {
+  max-height: 48px;
+  cursor: pointer;
+}
+
+/* --- LÓGICA DE ESCRITORIO (1455px) --- */
 @media (min-width: 1455px) {
   .section {
-    background-image: url('/public/fondo2.jpg');
+    background-image: url('/fondo2.jpg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 60% auto; 
     min-height: 500px; 
     padding: 4rem 3rem; 
+    display: flex;
+    align-items: center;
   }
+
+  /* Ocultamos la imagen física */
   .heroImage {
     display: none;
+  }
+  
+  /* Forzamos el ancho del texto al 50% solo en pantallas grandes */
+  .textCol {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
