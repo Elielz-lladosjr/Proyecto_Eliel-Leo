@@ -2,7 +2,10 @@
   background-color: #f3f2ee;
   box-sizing: border-box;
   padding: 3rem 2rem;
-  margin-top: 25rem; 
+  position: relative;
+  overflow: hidden;
+  /* Transición suave al redimensionar la pantalla */
+  transition: all 0.3s ease;
 }
 
 .title {
@@ -13,26 +16,18 @@
   margin: 0 0 1.5rem;
   max-width: 405px;
 }
-
-.heroImage {
-  max-width: 560px;
-  border-radius: 6px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+.infoText{
+  white-space: nowrap
 }
-
-.storeImg {
-  max-height: 48px;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1455px) {
   .section {
     background-image: url('/public/fondo2.jpg');
-    background-position: right center;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 450px;
+    background-position: right center;
+    background-size: 60% auto; 
+    min-height: 500px; 
+    padding: 4rem 3rem; 
   }
-
   .heroImage {
     display: none;
   }
