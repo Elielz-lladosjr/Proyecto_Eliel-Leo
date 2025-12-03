@@ -22,8 +22,8 @@ const Section4 = () => {
               />
               <button className="btn btn-success btn-lg fw-bold">ENTRAR</button>
             </div>
-
             <p className="text-muted mb-4">
+
               O descarga la App y haz tu compra en cualquier momento.
             </p>
 

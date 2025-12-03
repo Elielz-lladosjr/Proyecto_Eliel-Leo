@@ -4,7 +4,6 @@
   padding: 3rem 2rem;
   position: relative;
   overflow: hidden;
-  /* Transición suave al redimensionar la pantalla */
   transition: all 0.3s ease;
 }
 
@@ -17,7 +16,15 @@
   max-width: 405px;
 }
 
-/* Imagen visible solo en móvil (se oculta en escritorio) */
+/* --- TUS ESTILOS NUEVOS --- */
+.infoText {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  white-space: nowrap; /* Mantiene el texto en una sola línea */
+  width: 100%;
+}
+
+/* --- ESTILOS MÓVIL (Recuperados de la otra rama) --- */
 .heroImage {
   max-width: 100%;
   height: auto;
@@ -29,38 +36,30 @@
 
 .storeImg {
   max-height: 48px;
-  cursor: pointer; /* Un detalle visual extra */
+  cursor: pointer;
 }
 
-/* IMPORTANTE: Cambiamos de 768px a 992px.
-   ¿Por qué? Porque en tu TSX usas 'col-lg-6'. Bootstrap 'lg' empieza en 992px.
-   Si lo dejas en 768px, en una tablet verás el texto montado sobre la foto de fondo.
-*/
-@media (min-width: 992px) {
+/* --- LÓGICA DE ESCRITORIO (1455px) --- */
+@media (min-width: 1455px) {
   .section {
-    background-image: url('/public/fondo2.jpg');
+    background-image: url('/fondo2.jpg');
     background-repeat: no-repeat;
-    
-    /* TRUCO 1: Posición */
-    /* Pegamos la imagen totalmente a la derecha y centrada verticalmente */
     background-position: right center;
-
-    /* TRUCO 2: Tamaño (La clave del responsive) */
-    /* Decimos: "Ocupa el 50% del ancho del contenedor, y calcula la altura automática"
-       Esto hace que al "achicar" la web, la imagen se encoja proporcionalmente. */
-    background-size: 50% auto; 
-    
-    /* Ajustamos la altura y el padding para desktop */
-    min-height: 500px; /* Usar min-height es más seguro que height fijo */
-    padding: 4rem 3rem;
-    
-    /* Flex para centrar el contenido verticalmente si sobra espacio */
+    background-size: 60% auto; 
+    min-height: 500px; 
+    padding: 4rem 3rem; 
     display: flex;
     align-items: center;
   }
 
-  /* Ocultamos la imagen física <img> porque ya mostramos el fondo CSS */
+  /* Ocultamos la imagen física */
   .heroImage {
     display: none;
+  }
+  
+  /* Forzamos el ancho del texto al 50% solo en pantallas grandes */
+  .textCol {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
