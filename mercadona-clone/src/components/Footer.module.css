@@ -1,11 +1,9 @@
-/* Fondo oscuro típico de Mercadona */
 .customFooter {
   background-color: #1C3037;
   color: #ffffff;
   font-family: 'Muli', sans-serif;
 }
 
-/* Enlaces de las listas (Cliente, Trabajador, etc.) */
 .footerLink {
   color: #b8c2c2;
   font-size: 0.95rem;
