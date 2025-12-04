@@ -41,7 +41,8 @@ const Footer = () => {
             {/* Teléfono e Icono */}
             <div className="d-flex align-items-center justify-content-md-end mb-3">
               <div className="me-2 text-white">
-                <img src="/iconofooter.png" height="32" />
+                {/* CORRECCIÓN DE IMAGEN: Quitamos '/public' de la ruta */}
+                <img src="/iconofooter.png" height="32" alt="Teléfono" />
               </div>
               <span className="fs-4 fw-bold text-white">800 500 220</span>
             </div>
