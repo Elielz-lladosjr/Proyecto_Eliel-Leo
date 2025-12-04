@@ -9,7 +9,6 @@ import NotFound from './components/NotFound';
 import Placeholder from './components/Placeholder';
 
 function App() {
-  const [notFoundVisible, setNotFoundVisible] = useState(false);
 
   return (
     <Router>
