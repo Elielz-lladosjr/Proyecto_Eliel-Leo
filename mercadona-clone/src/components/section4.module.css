@@ -4,6 +4,7 @@
   padding: 3rem 2rem;
   position: relative;
   overflow: hidden;
+  /* Transición suave al redimensionar la pantalla */
   transition: all 0.3s ease;
 }
 
@@ -15,25 +16,19 @@
   margin: 0 0 1.5rem;
   max-width: 405px;
 }
-
-.heroImage {
-  display: none;
+.infoText{
+  white-space: nowrap
 }
-
-.storeImg {
-  max-height: 48px;
-  cursor: pointer; 
-}
-
-/* SOLO cuando la pantalla supera los 1735px, aparece la imagen de fondo */
 @media (min-width: 1735px) {
   .section {
-    /* Asegúrate de que la ruta sea correcta. En React suele ser '/fondo2.jpg' en lugar de '/public/...' */
-    background-image: url('/public/fondo2.jpg'); 
+    background-image: url('/public/fondo2.jpg');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 50% auto; 
+    background-size: 60% auto; 
     min-height: 500px; 
-    padding: 4rem 3rem;
+    padding: 4rem 3rem; 
+  }
+  .heroImage {
+    display: none;
   }
 }

@@ -1,8 +1,12 @@
-import { Facebook, Youtube, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Facebook, Youtube, Instagram, Linkedin, Mail } from 'lucide-react';
+// Asegúrate de que importas estilos si tienes un module.css, si no, usa clases de bootstrap
+// import styles from './Footer.module.css'; 
+
+// Si no tienes styles definido, usaré estilos en línea o clases estándar para evitar errores.
+// Asumiré que 'styles' viene de tu módulo anterior. Si te da error, avísame.
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  // Definimos los datos aquí para no ensuciar el HTML
   const sections = [
     { title: 'Cliente', links: ['Supermercados', 'Consejos', 'Factura cliente'] },
     { title: 'Trabajador', links: ['Trabaja con nosotros'] },
@@ -14,10 +18,10 @@ const Footer = () => {
     <footer className={`${styles.customFooter} pt-5 pb-4`}>
       <div className="container">
         
-        {/* Sección Superior: Enlaces y Contacto */}
+        {/* Sección Superior */}
         <div className="row">
           
-          {/* Columna Dinámica de Enlaces (Generada automáticamente) */}
+          {/* Enlaces Dinámicos */}
           {sections.map((section, index) => (
             <div key={index} className="col-6 col-md-2 mb-4">
               <h6 className="fw-bold text-white mb-3">{section.title}</h6>
@@ -31,14 +35,14 @@ const Footer = () => {
             </div>
           ))}
 
-          {/* Columna de Contacto (Alineada a la derecha) */}
+          {/* Contacto y Redes */}
           <div className="col-12 col-md-4 ms-auto text-md-end">
             
-            {/* Teléfono */}
+            {/* Teléfono e Icono */}
             <div className="d-flex align-items-center justify-content-md-end mb-3">
-              {/* Si no tienes la imagen exacta, usa este icono de Lucide temporalmente */}
               <div className="me-2 text-white">
-                <img src="/public/iconofooter.png" height="32" />
+                {/* CORRECCIÓN DE IMAGEN: Quitamos '/public' de la ruta */}
+                <img src="/iconofooter.png" height="32" alt="Teléfono" />
               </div>
               <span className="fs-4 fw-bold text-white">800 500 220</span>
             </div>
@@ -47,7 +51,8 @@ const Footer = () => {
             <div className="d-flex gap-2 justify-content-md-end">
               <a href="#" className={styles.socialBox}><Mail size={16} /></a>
               <a href="#" className={styles.socialBox}><Facebook size={16} /></a>
-              <a href="#" className={styles.socialBox} style={{fontWeight: 'bold', fontSize: '14px'}}>𝕏</a>
+              {/* Usamos un span para la X si no hay icono específico */}
+              <a href="#" className={styles.socialBox} style={{fontWeight: 'bold', fontSize: '14px', display:'flex', alignItems:'center', justifyContent:'center'}}>𝕏</a>
               <a href="#" className={styles.socialBox}><Youtube size={16} /></a>
               <a href="#" className={styles.socialBox}><Instagram size={16} /></a>
               <a href="#" className={styles.socialBox}><Linkedin size={16} /></a>
@@ -56,7 +61,7 @@ const Footer = () => {
 
         </div>
 
-        {/* Sección Inferior: Copyright y Legales */}
+        {/* Copyright y Legales */}
         <div className="row mt-4 pt-4 border-top border-secondary">
           <div className="col-md-6 text-center text-md-start mb-2">
             <small className="text-white-50">© Mercadona S.A. A46103834. Todos los derechos reservados.</small>
