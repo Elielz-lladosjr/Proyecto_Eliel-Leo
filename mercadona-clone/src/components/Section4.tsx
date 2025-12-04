@@ -1,29 +1,32 @@
+import { Container, Row, Col, Form, Button, FloatingLabel } from 'react-bootstrap';
 import styles from "./section4.module.css";
 
 const Section4 = () => {
   return (
-    <main className={styles.section}>
-      <div className="container">
-        <div className="row align-items-center">
-          {/* USAMOS 'col-md-6':
-              Esto es crucial. Como la imagen de fondo aparece ya desde los 768px (md),
-              necesitamos que el texto ocupe solo la mitad izquierda desde ese momento
-              para que no tape la foto. */}
-          <div className="col-md-6 col-12">
-            <h1 className={`display-4 fw-bold mb-4 ${styles.title}`}>
-              Empieza tu compra en Mercadona
+    <section className={styles.section}>
+      <Container>
+        <Row className="align-items-center">
+          <Col lg={6} md={12}>
+            <h1 className={`mb-3 ${styles.title}`}>
+              Empieza tu compra <br /> en Mercadona
             </h1>
             
-            <div className="d-flex gap-3 mb-4">
-              <input 
-                type="text" 
-                className="form-control form-control-lg" 
-                placeholder="Código postal"
-              />
-              <button className="btn btn-success btn-lg fw-bold">ENTRAR</button>
+            <div className="d-flex flex-column flex-sm-row gap-2 mb-4" style={{ maxWidth: '460px' }}>
+               <div className="flex-grow-1">
+                <FloatingLabel controlId="floatingInputSection4" label="Código postal" className="text-muted">
+                  <Form.Control 
+                    type="text" 
+                    placeholder="Código postal" 
+                    className={`shadow-sm border-0 ${styles.inputField}`}
+                  />
+                </FloatingLabel>
+               </div>
+               <Button className={`btn-lg fw-bold px-5 shadow-sm ${styles.enterButton}`}>
+                 ENTRAR
+               </Button>
             </div>
 
-            <p className=".infoText">
+            <p className={`text-muted mb-4 ${styles.infoText}`}>
               O descarga la App y haz tu compra en cualquier momento.
             </p>
 
@@ -31,11 +34,10 @@ const Section4 = () => {
               <img src="/playstore.svg" alt="Google Play" className={styles.storeImg} />
               <img src="/appstore.svg" alt="App Store" className={styles.storeImg} />
             </div>
-
-          </div>
-        </div>
-      </div>
-    </main>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

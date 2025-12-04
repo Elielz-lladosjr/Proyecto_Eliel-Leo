@@ -1,34 +1,47 @@
 .section {
   background-color: #f3f2ee;
-  box-sizing: border-box;
-  padding: 3rem 2rem;
-  position: relative;
+  padding: 2rem 0rem;
   overflow: hidden;
-  /* Transición suave al redimensionar la pantalla */
   transition: all 0.3s ease;
 }
 
 .title {
+  font-family: 'Merriweather', serif;
   color: #111111;
-  line-height: 1.03;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2.3rem;
-  margin: 0 0 1.5rem;
-  max-width: 405px;
+  font-size: 2rem;
+  font-weight: 900;
 }
-.infoText{
-  white-space: nowrap
+
+.infoText {
+  max-width: 300px;
 }
-@media (min-width: 1735px) {
+
+.enterButton {
+    background-color: #00AB61 !important;
+    color: white !important;
+    border: none !important;
+    transition: background-color 0.2s;
+}
+
+.enterButton:hover {
+    background-color: #008f1c !important;
+}
+
+.inputField:focus {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.storeImg {
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
   .section {
-    background-image: url('/public/fondo2.jpg');
+    background-image: url('/fondo2.jpg');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 60% auto; 
-    min-height: 500px; 
-    padding: 4rem 3rem; 
-  }
-  .heroImage {
-    display: none;
+    background-size: 65% auto; 
+    padding: 3rem 0rem; 
   }
 }

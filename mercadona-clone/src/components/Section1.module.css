@@ -1,0 +1,38 @@
+.heroSection {
+    background-image: url(/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        background-image: url(/fondo.1.2.jpg);
+    }
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #000;
+}
+
+.subtitle {
+    max-width: 450px;
+}
+
+.enterButton {
+    background-color: #00AB61 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.enterButton:hover {
+    background-color: #008f1c !important;
+}
+
+.inputField:focus {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
