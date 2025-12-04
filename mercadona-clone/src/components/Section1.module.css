@@ -14,39 +14,25 @@
 
 .title {
     font-family: 'Merriweather', serif;
-    font-weight: 900 !important;
-    font-size: 2.7rem;
+    font-size: 2.6rem;
+    font-weight: 900;
     color: #000;
-    margin-bottom: 1rem;
 }
 
 .subtitle {
-    color: #666;
-    margin-bottom: 1.5rem;
-    max-width: 460px;
+    max-width: 450px;
 }
 
 .enterButton {
-    background-color: #4aae5e !important;
+    background-color: #00AB61 !important;
+    color: white !important;
     border: none !important;
-    font-weight: 700 !important;
-    padding: 0 45px !important;
-    height: 56px !important;
-    transition: background-color 0.2s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
 }
 
 .enterButton:hover {
     background-color: #008f1c !important;
 }
 
-.inputField {
-    height: 56px !important;
-    border: none !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
-}
-
 .inputField:focus {
-    outline: none !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }

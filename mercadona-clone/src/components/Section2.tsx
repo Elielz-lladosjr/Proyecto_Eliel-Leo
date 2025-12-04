@@ -6,8 +6,8 @@ const Section2 = () => {
     <section className={styles.section2}>
       <Container>
         <Row className="align-items-center justify-content-center column-gap-4">
-          <Col md={5} className="mb-4 mb-md-0 text-center text-md-start">
-            <div className={styles.contentWrapper}>
+          <Col md={5}>
+            <div>
               <h2 className={styles.title}>Compra online</h2>
               <p className={styles.description}>
                 Recibe tu pedido en casa con la misma calidad y frescura de siempre.
@@ -19,7 +19,6 @@ const Section2 = () => {
               src="/cuadro1.jpeg" 
               alt="Compra online en Mercadona" 
               fluid 
-              className={styles.image}
             />
           </Col>
         </Row>

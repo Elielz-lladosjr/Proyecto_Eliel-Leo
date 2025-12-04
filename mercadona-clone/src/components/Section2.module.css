@@ -1,13 +1,18 @@
 .section2 {
-    padding: 3rem 0;
+    padding: 3rem;
     background-color: #fff;
+    overflow: hidden;
+}
+
+.section3 {
+    padding: 3rem;
+    background-color: #F7F7F7;
     overflow: hidden;
 }
 
 .title {
     font-family: 'Merriweather', serif;
     font-weight: 900;
-    font-size: 2rem;
     color: #000;
     margin-bottom: 1.5rem;
 }
@@ -15,17 +20,15 @@
 .description {
     color: #666;
     font-size: 1.1rem;
-    max-width: 400px; /* Limit width to match image look */
-    margin: 0 auto; /* Center if text-center */
+    max-width: 550px;
 }
 
-@media (min-width: 768px) {
-    .description {
-        margin: 0; /* Reset margin for left align on desktop */
-    }
+.Link {
+  color: #4aae5e;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
-.image {
-    width: 100%;
-    height: auto;
+.Link:hover {
+  color: #008f1c;
 }
