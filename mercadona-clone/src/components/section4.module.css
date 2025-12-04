@@ -1,65 +1,47 @@
 .section {
   background-color: #f3f2ee;
-  box-sizing: border-box;
-  padding: 3rem 2rem;
-  position: relative;
+  padding: 2rem 0rem;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .title {
+  font-family: 'Merriweather', serif;
   color: #111111;
-  line-height: 1.03;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2.3rem;
-  margin: 0 0 1.5rem;
-  max-width: 405px;
+  font-size: 2rem;
+  font-weight: 900;
 }
 
-/* --- TUS ESTILOS NUEVOS --- */
 .infoText {
-  color: #6c757d;
-  margin-bottom: 1.5rem;
-  white-space: nowrap; /* Mantiene el texto en una sola línea */
-  width: 100%;
+  max-width: 300px;
 }
 
-/* --- ESTILOS MÓVIL (Recuperados de la otra rama) --- */
-.heroImage {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  margin-top: 2rem;
-  display: block;
+.enterButton {
+    background-color: #00AB61 !important;
+    color: white !important;
+    border: none !important;
+    transition: background-color 0.2s;
+}
+
+.enterButton:hover {
+    background-color: #008f1c !important;
+}
+
+.inputField:focus {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .storeImg {
-  max-height: 48px;
+  height: 40px;
   cursor: pointer;
 }
 
-/* --- LÓGICA DE ESCRITORIO (1455px) --- */
-@media (min-width: 1455px) {
+@media (min-width: 992px) {
   .section {
     background-image: url('/fondo2.jpg');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 60% auto; 
-    min-height: 500px; 
-    padding: 4rem 3rem; 
-    display: flex;
-    align-items: center;
-  }
-
-  /* Ocultamos la imagen física */
-  .heroImage {
-    display: none;
-  }
-  
-  /* Forzamos el ancho del texto al 50% solo en pantallas grandes */
-  .textCol {
-    flex: 0 0 50%;
-    max-width: 50%;
+    background-size: 65% auto; 
+    padding: 3rem 0rem; 
   }
 }
