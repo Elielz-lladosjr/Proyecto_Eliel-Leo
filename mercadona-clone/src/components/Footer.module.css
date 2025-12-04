@@ -1,6 +1,6 @@
 /* Fondo oscuro típico de Mercadona */
 .customFooter {
-  background-color: #0d2e30; /* Un verde muy oscuro/grisáceo */
+  background-color: #1C3037;
   color: #ffffff;
   font-family: 'Muli', sans-serif;
 }
@@ -8,7 +8,6 @@
 /* Enlaces de las listas (Cliente, Trabajador, etc.) */
 .footerLink {
   color: #b8c2c2;
-  text-decoration: none;
   font-size: 0.95rem;
   line-height: 2;
   transition: color 0.2s ease;
@@ -16,10 +15,8 @@
 
 .footerLink:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
-/* Cajas para los iconos de redes sociales */
 .socialBox {
   display: flex;
   align-items: center;
@@ -38,25 +35,12 @@
   color: white;
 }
 
-/* Enlaces legales del fondo (Política, Cookies...) */
 .legalLink {
   color: #8fa3a3;
-  text-decoration: none;
   font-size: 0.85rem;
-  margin-left: 1.5rem;
   transition: color 0.2s ease;
 }
 
 .legalLink:hover {
   color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Ajustes responsive para los enlaces legales */
-@media (max-width: 768px) {
-  .legalLink {
-    display: block;
-    margin-left: 0;
-    margin-bottom: 0.5rem;
-  }
 }
